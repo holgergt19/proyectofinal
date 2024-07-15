@@ -1,0 +1,17 @@
+# Ignorar archivos y directorios innecesarios
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+docs/
+tests/
+*.egg-info/
+.env
+.venv/
+env/
+venv/
+.idea/
