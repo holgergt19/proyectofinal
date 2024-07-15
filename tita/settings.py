@@ -197,15 +197,6 @@ aws_config_path = os.path.join('aws', '.aws')
 # Crear una instancia de ConfigParser
 config = configparser.ConfigParser()
 
-# Leer las credenciales de AWS desde el archivo credentials
-config.read(os.path.join(aws_config_path, 'credentials'))
-AWS_ACCESS_KEY_ID = config['default']['aws_access_key_id']
-AWS_SECRET_ACCESS_KEY = config['default']['aws_secret_access_key']
-
-# Leer la región desde el archivo config
-config.read(os.path.join(aws_config_path, 'config'))
-AWS_DEFAULT_REGION = config['default']['region']
-
 # Configuración de almacenamiento en S3
 AWS_STORAGE_BUCKET_NAME = 'bucketstatico'
 AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
