@@ -1,5 +1,6 @@
 asgiref==3.8.1
 certifi==2024.7.4
+boto3
 chardet==5.2.0
 charset-normalizer==3.3.2
 dj-database-url==2.2.0
