@@ -191,8 +191,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_heroku.settings(locals())
 import configparser
-# Establecer la ruta a los archivos de configuración de AWS
-aws_config_path = os.path.join('aws', '.aws')
+
 
 # Crear una instancia de ConfigParser
 config = configparser.ConfigParser()
