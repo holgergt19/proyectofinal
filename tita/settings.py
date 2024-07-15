@@ -192,10 +192,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
 import configparser
 
-AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
-AWS_DEFAULT_REGION = os.getenv('AWS_DEFAULT_REGION')
+
+AWS_ACCESS_KEY_ID = 'AKIAXYKJQ7LPI4TLWO52'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_DEFAULT_REGION = 'us-west-2'
 
 
 
