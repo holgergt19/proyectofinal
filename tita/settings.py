@@ -118,16 +118,22 @@ AUTH_USER_MODEL = 'login.Account'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'p2',  # Nombre de la base de datos que ya tienes creada
-        'USER': 'postgres',  # Nombre de usuario de tu PostgreSQL
-        'PASSWORD': '12345',  # Contraseña de tu usuario PostgreSQL
-        'HOST': 'localhost',  # Host donde se está ejecutando PostgreSQL
-        'PORT': '5432',  # Puerto donde se está ejecutando PostgreSQL (generalmente 5432)
+        'NAME': os.getenv('DATABASE_NAME', 'p2'),
+        'USER': os.getenv('DATABASE_USER', 'postgres'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD', '12345'),
+        'HOST': os.getenv('DATABASE_HOST', 'localhost'),
+        'PORT': os.getenv('DATABASE_PORT', '5432'),
     }
 }
+
+
 
 
 # Password validation
