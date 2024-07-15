@@ -14,7 +14,6 @@ dlib
 opencv-python==4.10.0.84
 pillow==10.3.0
 psycopg2==2.9.9
-psycopg2-binary==2.8.6
 python-decouple==3.4
 reportlab==4.2.0
 requests==2.32.3
