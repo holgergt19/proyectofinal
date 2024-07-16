@@ -189,33 +189,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 django_heroku.settings(locals())
-import configparser
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR /'static'
+STATICFILES_DIRS = [
+    'tita/static'
+]
 
-
-AWS_ACCESS_KEY_ID = 'AKIAXYKJQ7LPI4TLWO52'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_DEFAULT_REGION = 'us-east-1'
-
-
-
-# Crear una instancia de ConfigParser
-config = configparser.ConfigParser()
-
-# Configuración de almacenamiento en S3
-AWS_STORAGE_BUCKET_NAME = 'titastatic'
-AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
-
-STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
-MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/media/'
-
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-
-# Opciones adicionales para asegurar que S3 funcione correctamente
-AWS_QUERYSTRING_AUTH = False
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
