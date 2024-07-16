@@ -1,1 +1,1 @@
-web gunicorn tita/wsgi.py --log-file -
+web gunicorn tita.wsgi:application --log-file -
